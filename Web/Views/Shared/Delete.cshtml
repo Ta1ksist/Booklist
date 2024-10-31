@@ -1,0 +1,44 @@
+@model Web.Data.Book
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Удалить</h1>
+<h4>Книгa «@Html.DisplayFor(model => model.Title)»</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <form asp-action="Delete">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <div class="btn-group" role="group">
+            <input type="submit" class="btn btn-primary" value="Удалить"/>
+            <input asp-controller="Home" asp-action="Index" type="submit" class="btn btn-primary" value="Вернуться"/>
+        </div>
+        </form>
+    </dl>
+</div>
