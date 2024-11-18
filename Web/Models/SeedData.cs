@@ -12,10 +12,10 @@ public static void Initialize(IServiceProvider serviceProvider)
             serviceProvider.GetRequiredService<
                 DbContextOptions<BookContext>>()))
         {
-            // Look for any movies.
+           
             if (context.Books.Any())
             {
-                return;   // DB has been seeded
+                return;  
             }
             context.Books.AddRange(
                 new Book
